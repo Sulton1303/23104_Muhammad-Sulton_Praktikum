@@ -26,7 +26,7 @@ public class BingoLagu {
 
         // Menampilkan tiga baris tepukan
         for (int i = 0; i < 3; i++) {
-            buatBaris(jmlhTepuk);  // Langsung cetak hasil di sini
+            buatBaris(jmlhTepuk);  
         }
 
         // Output bagian akhir bait lagu
@@ -35,7 +35,7 @@ public class BingoLagu {
 
     // Method untuk menghasilkan baris lagu dengan tepukan
     private void buatBaris(int jmlhTepuk) {
-        // Jika tidak ada tepukan, langsung cetak "B-I-N-G-O"
+        // Jika tidak ada tepukan, langsung mencetak kata Bingo
         if (jmlhTepuk == 0) {
             System.out.println("B-I-N-G-O");
         } else {
@@ -43,7 +43,7 @@ public class BingoLagu {
             for (int i = 0; i < jmlhTepuk; i++) {
                 System.out.print(tepukan);
                 if (i < jmlhTepuk - 1) {
-                    System.out.print("-");  // Menambahkan tanda "-" diantara tepukan
+                    System.out.print("-");
                 }
             }
 
@@ -57,7 +57,7 @@ public class BingoLagu {
             } else if (jmlhTepuk == 4) {
                 System.out.println("-O");
             } else {
-                System.out.println();  // Jika 5 tepukan, langsung ganti baris
+                System.out.println();
             }
         }
     }
