@@ -12,43 +12,54 @@ public class BingoLagu {
     private String nama;
     private String tepukan;
 
-    //Membuat konstruktor
+    // Membuat konstruktor
     public BingoLagu(String nama, String tepukan) {
         this.nama = nama;
         this.tepukan = tepukan;
     }
 
-    //Method untuk menampilkan satu bait lagu
+    // Method untuk menampilkan satu bait lagu
     public void baitLagu(int jmlhTepuk) {
+        // output bagian awal
         System.out.println("There was a farmer who had a dog,");
         System.out.println("And " + nama + " was his name-o.");
+
+        // Menampilkan tiga baris tepukan
         for (int i = 0; i < 3; i++) {
-            System.out.println(buatBaris(jmlhTepuk));
+            buatBaris(jmlhTepuk);  // Langsung cetak hasil di sini
         }
+
+        // Output bagian akhir bait lagu
         System.out.println("And " + nama + " was his name-o.\n");
     }
 
     // Method untuk menghasilkan baris lagu dengan tepukan
-    private String buatBaris(int jmlhTepuk) {
-                String line = "";
-
-        // Pengkondisian jika tidak ada 
+    private void buatBaris(int jmlhTepuk) {
+        // Jika tidak ada tepukan, langsung cetak "B-I-N-G-O"
         if (jmlhTepuk == 0) {
-            line = "B-I-N-G-O";
+            System.out.println("B-I-N-G-O");
         } else {
             // Tambahkan tepukan sebanyak jmlhTepuk
             for (int i = 0; i < jmlhTepuk; i++) {
-                line += tepukan;
+                System.out.print(tepukan);
                 if (i < jmlhTepuk - 1) {
-                    line += "-";
+                    System.out.print("-");  // Menambahkan tanda "-" diantara tepukan
                 }
             }
+
             // Jika jumlah tepukan kurang dari 5, tambahkan sisa huruf
-            if (jmlhTepuk < 5) {
-                line += "-" + "B-I-N-G-O".substring(jmlhTepuk * 2);
+            if (jmlhTepuk == 1) {
+                System.out.println("-I-N-G-O");
+            } else if (jmlhTepuk == 2) {
+                System.out.println("-N-G-O");
+            } else if (jmlhTepuk == 3) {
+                System.out.println("-G-O");
+            } else if (jmlhTepuk == 4) {
+                System.out.println("-O");
+            } else {
+                System.out.println();  // Jika 5 tepukan, langsung ganti baris
             }
         }
-        return line;
     }
 }
 
