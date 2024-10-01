@@ -67,7 +67,7 @@ public class mahasiswa {
         System.out.println("\nDetail Nilai Mahasiswa");
         System.out.println("NPM Mahasiswa      : " + npm);
         System.out.println("Nama Mahasiswa     : " + nama);
-        System.out.println("Nilai Rata-rata    : " + nilaiAkhir);
+        System.out.println("Nilai Akhir        : " + nilaiAkhir);
         System.out.println("Grade              : " + grade);
         System.out.println("Keterangan         : " + keterangan);
     }
